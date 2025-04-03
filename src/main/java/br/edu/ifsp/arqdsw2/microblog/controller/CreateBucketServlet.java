@@ -23,7 +23,7 @@ public class CreateBucketServlet extends HttpServlet {
 
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		String bucketName = "joao_andolpho_bucket";
+		String bucketName = "joao-andolpho-bucket-1265212";
 		CreateBucketRequest req;
 		req = CreateBucketRequest.builder().bucket(bucketName).build();
 		s3Client.createBucket(req);
