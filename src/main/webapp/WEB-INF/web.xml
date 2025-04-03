@@ -4,6 +4,16 @@
 
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>CreateBucketServlet</servlet-name>
+		<display-name>CreateBucketServlet</display-name>
+		<description></description>
+		<servlet-class>br.edu.ifsp.arqdsw2.microblog.controller.CreateBucketServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateBucketServlet</servlet-name>
+		<url-pattern>/CreateBucketServlet</url-pattern>
+	</servlet-mapping>
 	<resource-ref>
 		<description>Microblog JNDI AWSS3</description>
 		<res-ref-name>jdbc/Microblog</res-ref-name>
