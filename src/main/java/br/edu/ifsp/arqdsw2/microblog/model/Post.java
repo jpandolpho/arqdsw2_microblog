@@ -38,5 +38,21 @@ public class Post {
 	public void setUrlImagem(String urlImagem) {
 		this.urlImagem = urlImagem;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public LocalDateTime getDataPostagem() {
+		return dataPostagem;
+	}
+
+	public void setDataPostagem(LocalDateTime dataPostagem) {
+		this.dataPostagem = dataPostagem;
+	}
 	
 }

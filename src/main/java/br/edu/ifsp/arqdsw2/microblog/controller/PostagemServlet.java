@@ -52,7 +52,7 @@ public class PostagemServlet extends HttpServlet {
 		String descricao = request.getParameter("descricao");
 		String nomeArquivo = UUID.randomUUID() + "-" + imagemPart.getSubmittedFileName();
 		try (InputStream inputStream = imagemPart.getInputStream()) {
-			PutObjectRequest objectRequest = PutObjectRequest.builder().bucket("nome_unico_global_bucket")
+			PutObjectRequest objectRequest = PutObjectRequest.builder().bucket("joao-andolpho-bucket-1265212")
 					.key(nomeArquivo).contentType(imagemPart.getContentType()).build();
 			s3.putObject(objectRequest,
 					software.amazon.awssdk.core.sync.RequestBody.fromInputStream(inputStream, imagemPart.getSize()));
@@ -63,7 +63,7 @@ public class PostagemServlet extends HttpServlet {
 		Post post = new Post(descricao, nomeArquivo);
 		try {
 			InitialContext ctx = new InitialContext();
-			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/MicroBlog");
+			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/Microblog");
 			Connection conn = ds.getConnection();
 			postDAO.salvar(conn, post);
 			conn.close();

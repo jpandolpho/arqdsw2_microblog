@@ -25,10 +25,10 @@ public class ListarPostsServlet extends HttpServlet {
 			throws ServletException, IOException {
 		try {
 			InitialContext ctx = new InitialContext();
-			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/MicroBlog");
+			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/Microblog");
 			Connection conn = ds.getConnection();
 			List<Post> posts = postDAO.listarTodos(conn);
-			String urlBucket = "https://" + "nome_unico_global_bucket" + ".s3." + Region.SA_EAST_1.toString()
+			String urlBucket = "https://" + "joao-andolpho-bucket-1265212" + ".s3." + Region.SA_EAST_1.toString()
 					+ ".amazonaws.com/";
 			request.setAttribute("posts", posts);
 			request.setAttribute("urlBucket", urlBucket);
