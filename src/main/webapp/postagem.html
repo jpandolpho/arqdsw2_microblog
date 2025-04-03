@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Nova Postagem</title>
+</head>
+<body>
+	<h2>Criar Postagem</h2>
+	<form action="postar" method="post" enctype="multipart/form-data">
+		<label for="texto">Descrição da Postagem:</label><br>
+		<textarea name="descricao" id="descricao" rows="5" cols="40" required></textarea>
+		<br>
+		<br> <label for="imagem">Imagem:</label><br> <input
+			type="file" name="imagem" id="imagem" accept="image/*"><br>
+		<br>
+		<button type="submit">Postar</button>
+	</form>
+</body>
+</html>
