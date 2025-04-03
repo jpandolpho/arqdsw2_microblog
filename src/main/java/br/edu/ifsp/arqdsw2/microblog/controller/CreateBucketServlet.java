@@ -28,6 +28,6 @@ public class CreateBucketServlet extends HttpServlet {
 		req = CreateBucketRequest.builder().bucket(bucketName).build();
 		s3Client.createBucket(req);
 		PrintWriter out = response.getWriter();
-		out.println("Bucker " + bucketName + " criado com sucesso!");
+		out.println("Bucket " + bucketName + " criado com sucesso!");
 	}
 }
