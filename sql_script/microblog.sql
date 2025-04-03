@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS microblog;
+USE microblog;
+CREATE TABLE post (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao TEXT NOT NULL,
+    url_imagem TEXT,
+    data_postagem TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
